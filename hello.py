@@ -8,7 +8,7 @@ def hello_world():
 @app.route('/bye')
 def bye():
     return 'bye'
-@app.route('/user/<username>')
-def show_user_profile(username):
+@app.route('/user/<username>/<int:number>')
+def show_user_profile(username,number):
     # show the user profile for that user
-    return 'User %s' % escape(username)
+    return f"{number}"'User %s' % escape(username)
